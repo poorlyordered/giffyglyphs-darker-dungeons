@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or chapter.title or "Giffyglyph's Darker Dungeons" }} — Giffyglyph's Darker Dungeons</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body class="site">
+  <nav class="site__nav">
+    <div class="site__nav__header">
+      <a href="/" class="site__nav__title">Darker Dungeons</a>
+    </div>
+    <ul class="site__nav__sections">
+      {% for section in nav %}
+        <li class="site__nav__section">
+          <span class="site__nav__section__label">
+            <span class="site__nav__section__highlight">{{ section.highlight }}</span>{{ section.title }}
+          </span>
+          <ul class="site__nav__chapters">
+            {% for chapter in section.chapters %}
+              <li class="site__nav__chapter {% if '/' + chapter.id + '/' == page.url %}active{% endif %}">
+                <a href="/{{ chapter.id }}/">{{ chapter.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <main class="site__content">
+    {{ content | safe }}
+  </main>
+</body>
+</html>

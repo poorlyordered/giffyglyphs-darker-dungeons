@@ -1,0 +1,14 @@
+{
+  "name": "giffyglyphs-darker-dungeons",
+  "version": "4.0.0",
+  "description": "Giffyglyph's Darker Dungeons — modular rules for D&D 5e",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "jsdom": "^25.0.0",
+    "sass": "^1.80.0"
+  }
+}

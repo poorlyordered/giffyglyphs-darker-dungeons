@@ -1,0 +1,142 @@
+@import '../stylesheets/_book/styles';
+@import '../stylesheets/_website/themes/theme-dd';
+@import '../stylesheets/_website/pages/page--active-inventory';
+@import '../stylesheets/_website/pages/page--character-creation';
+@import '../stylesheets/_website/pages/page--oils';
+
+// Site navigation and layout
+
+.site {
+  display: flex;
+  min-height: 100vh;
+}
+
+.site__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  overflow-y: auto;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.site__nav__header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+.site__nav__title {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.site__nav__sections {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site__nav__section {
+  margin-bottom: 1.5rem;
+}
+
+.site__nav__section__label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.site__nav__section__highlight {
+  color: #5b9bd5;
+  margin-right: 0.25rem;
+}
+
+.site__nav__chapters {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site__nav__chapter a {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  color: #c0c0c0;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 0.875rem;
+}
+
+.site__nav__chapter a:hover,
+.site__nav__chapter.active a {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.site__content {
+  margin-left: 260px;
+  padding: 2rem;
+  flex: 1;
+  max-width: 960px;
+}
+
+.home__header {
+  margin-bottom: 2rem;
+}
+
+.home__toc {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.home__section h2 {
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.home__section__highlight {
+  color: #1756a5;
+}
+
+.home__section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home__section li {
+  margin-bottom: 0.4rem;
+  font-size: 0.875rem;
+}
+
+.home__section a {
+  color: #1756a5;
+  text-decoration: none;
+}
+
+.home__section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .site__nav {
+    position: static;
+    width: 100%;
+  }
+
+  .site__content {
+    margin-left: 0;
+  }
+}

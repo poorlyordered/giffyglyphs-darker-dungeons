@@ -1,0 +1,9 @@
+---
+pagination:
+  data: chapters
+  size: 1
+  alias: chapter
+permalink: "/{{ chapter.id }}/"
+layout: layouts/chapter.njk
+---
+{{ chapter.content | safe }}

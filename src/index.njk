@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+title: "Giffyglyph's Darker Dungeons"
+permalink: /
+---
+<article class="home">
+  <header class="home__header">
+    <h1>Giffyglyph's Darker Dungeons</h1>
+    <p>Add some danger and grit to your D&amp;D 5e games with modular rules.</p>
+  </header>
+  <nav class="home__toc">
+    {% for section in nav %}
+      <section class="home__section">
+        <h2>
+          <span class="home__section__highlight">{{ section.highlight }}</span>
+          {{ section.title }}
+        </h2>
+        <ul>
+          {% for chapter in section.chapters %}
+            <li>
+              <a href="/{{ chapter.id }}/">{{ chapter.title }}</a> — {{ chapter.description }}
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </nav>
+</article>
