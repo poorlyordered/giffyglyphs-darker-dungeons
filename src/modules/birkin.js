@@ -2,7 +2,8 @@
 
 module.exports = {
 	createDiseases: createDiseases,
-	getDisease: getDisease
+	getDisease: getDisease,
+	getDiseases: getDiseases
 };
 
 const DISEASES = [
@@ -175,7 +176,7 @@ const DISEASES = [
 		transmission: 'Touch (excrement)',
 		incubation: '1 week',
 		description: {
-			short: 'A parasite that lives inside the body causing weight loss	',
+			short: 'A parasite that lives inside the body causing weight loss',
 			long: 'Tiny parasites that hide away in rotten meat and excrement. Watch what you eat.'
 		},
 		stages: {
@@ -223,6 +224,14 @@ const DISEASES = [
 		cured: 'You have an annoying cough for the next week.'
 	}
 ];
+
+/**
+ * Get all diseases.
+ * @return {object[]} diseases
+ */
+function getDiseases () {
+	return DISEASES;
+}
 
 /**
  * Get a disease by name.

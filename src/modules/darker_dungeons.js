@@ -20,9 +20,7 @@ const DarkerDungeons = (function() {
 		// Render diseases
 		BIRKIN.createDiseases(html);
 		html.querySelectorAll('.table--diseases-contents tbody').forEach(function (element) {
-			const diseases = [ 'Bubonic Plague', 'Chickenpox', 'Cholera', 'Diphtheria', 'Dysentery', 'Influenza', 'Smallpox', 'Stonescale', 'Syphilis', 'Tapeworm', 'Typhoid Fever', 'Whooping Cough' ];
-			diseases.forEach(function (name) {
-				const disease = BIRKIN.getDisease(name);
+			BIRKIN.getDiseases().forEach(function (disease) {
 				element.innerHTML += `
 					<tr>
 						<td>${disease.name}</td>
