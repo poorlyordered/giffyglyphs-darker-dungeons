@@ -1,7 +1,7 @@
 {
-  "name": "giffyglyphs-darker-dungeons",
+  "name": "darker-dungeons-web",
   "version": "4.0.0",
-  "description": "Giffyglyph's Darker Dungeons — modular rules for D&D 5e",
+  "description": "Eleventy web edition build of Giffyglyph's Darker Dungeons — modular rules for D&D 5e (content © Giffyglyph, CC BY-NC-ND 4.0)",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve"
