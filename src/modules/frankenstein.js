@@ -74,7 +74,7 @@ const ROLES = [
 		powers: [
 			{
 				name: 'Counterattack',
-				description: 'When a creature misses you with a melee weapon attack misses you, you can spend your reaction to make one attack against that creature.'
+				description: 'When a creature misses you with a melee weapon attack, you can spend your reaction to make one attack against that creature.'
 			},
 			{
 				name: 'Don\'t Look Away',
@@ -236,7 +236,7 @@ const ROLES = [
 				description: 'Your attacks score a critical hit on a roll of 19-20. In addition, when you critically hit a creature, that creature must make a Constitution saving throw or be <i>Stunned</i> until the start of your next turn.'
 			},
 			{
-				name: 'Vengence',
+				name: 'Vengeance',
 				description: 'When you hit a creature that has attacked you since the end of your last turn, you can deal extra damage equal to your level ([level]).'
 			}
 		]
@@ -266,7 +266,7 @@ const ROLES = [
 			},
 			{
 				name: 'Hard to Hit',
-				description: 'When you are standing and unrestained, attacks against you have disadvantage unless you are adjacent to two or more enemies.'
+				description: 'When you are standing and unrestrained, attacks against you have disadvantage unless you are adjacent to two or more enemies.'
 			},
 			{
 				name: 'I Saw That Coming',
@@ -432,7 +432,7 @@ const TRAITS = [
 	},
 	{
 		name: 'Disintegration',
-		description: 'When you die, your body distintegrates into dust. You leave behind your weapons and anything else you are carrying.'
+		description: 'When you die, your body disintegrates into dust. You leave behind your weapons and anything else you are carrying.'
 	},
 	{
 		name: 'Dragonbreath',
@@ -588,7 +588,7 @@ const TRAITS = [
 	},
 	{
 		name: 'Split',
-		description: 'When you are bloodied, you split into two smaller copies. Each new copy has hit points equal to half of your remaining hit points, and acts independantly.'
+		description: 'When you are bloodied, you split into two smaller copies. Each new copy has hit points equal to half of your remaining hit points, and acts independently.'
 	},
 	{
 		name: 'Sure-footed',
@@ -620,7 +620,7 @@ const TRAITS = [
 	},
 	{
 		name: 'Undying Fortitude',
-		description: 'If damage reduces you to 0 hit points, make a Consititution saving throw with a DC of 5 + the damage taken. On a success, you drop to 1 hit point instead.'
+		description: 'If damage reduces you to 0 hit points, make a Constitution saving throw with a DC of 5 + the damage taken. On a success, you drop to 1 hit point instead.'
 	},
 	{
 		name: 'Wakeful',
@@ -1239,7 +1239,7 @@ function renderMonster (monster, innerHtml, hideDetails) {
 					</div>
 				</div>
 				<div class='monster__saves'><strong>Saving Throws</strong>
-					${capitalise(monster.priorities[0])} ${formatNumber(monster.stats.saves[monster.priorities[0].toLowerCase()])}, ${capitalise(monster.priorities[1])}/${capitalise(monster.priorities[2])} ${formatNumber(monster.stats.saves[monster.priorities[1].toLowerCase()])}, ${capitalise(monster.priorities[3])}/${capitalise(monster.priorities[4])}/${capitalise(monster.priorities[5])} ${formatNumber(monster.stats.saves[monster.priorities[3].toLowerCase()])}</td>
+					${capitalise(monster.priorities[0])} ${formatNumber(monster.stats.saves[monster.priorities[0].toLowerCase()])}, ${capitalise(monster.priorities[1])}/${capitalise(monster.priorities[2])} ${formatNumber(monster.stats.saves[monster.priorities[1].toLowerCase()])}, ${capitalise(monster.priorities[3])}/${capitalise(monster.priorities[4])}/${capitalise(monster.priorities[5])} ${formatNumber(monster.stats.saves[monster.priorities[3].toLowerCase()])}
 				</div>
 				<div class='monster__skills'><strong>Skills</strong>
 					 Initiative ${formatNumber(monster.stats.initiative)},

@@ -191,5 +191,5 @@ function getRookies () {
  * @return {object}
  */
 function getRookie (name) {
-	return ROOKIES.find((x) => x.name.toLowerCase().trim() == name.toLowerCase().trim());
+	return ROOKIES.find((x) => x.background.toLowerCase().trim() == name.toLowerCase().trim());
 }
